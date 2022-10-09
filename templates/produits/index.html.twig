@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProduitsController!
+{% endblock %}
+
+{% block body %}
+	<div class="carte">
+		<div class="count">
+			Nombre d'articles:
+			{{pagination.getTotalItemCount}}
+		</div>
+		<div class="navigation" style="margin-top:20px">
+			{{knp_pagination_render(pagination)}}
+		</div>
+		<div class="container Accueil-produit">
+			{% if (app.user) %}
+
+				<a href="{{path('app_produit_new')}}" class="button">Ajouter du produit</a>
+			{% endif %}
+			<div class="column is-5">
+				<div class="card">
+					<p class="is-size-2 has-text-centered has-text-warning">Dernier rajout</p>
+					<div class="content">
+						<div class="picture">
+
+							<img src="/image/{{dernierProduit.photoCarte}}" alt="">
+						</div>
+						<h1>{{dernierProduit.nom}}</h1>
+						<p>{{dernierProduit.description[:200]}}</p>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="container  columns">
+
+				{% for produit_card in pagination %}
+					<div class="column is-6">
+						<div class="card">
+							<div class="content">
+								<div class="picture">
+									<img src="/image/{{produit_card.photoCarte}}" alt="">
+								</div>
+								<h1>{{produit_card.nom}}</h1>
+								<p>{{produit_card.description[:200]}}</p>
+
+								<a href="{{path('app_produit_afficher',{'id':produit_card.id})}}" class="a-btn-0">Detail du produit</a>
+
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+
+	</div>
+
+
+{% endblock %}

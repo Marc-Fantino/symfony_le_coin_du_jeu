@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier une annonce!
+{% endblock %}
+
+{% block body %}
+	<div class="container box" style="background: rgba(255, 255, 255, 0.1);">
+		<h1 class="title is-1 is-info">Modifier une annonce</h1>
+
+		{{include('annonces/form.html.twig') }}
+
+		<a href="{{path('app_annonces') }}" class="button is-info mt-3">Annuler</a>
+
+	</div>
+
+{% endblock %}

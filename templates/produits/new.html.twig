@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un produit!
+{% endblock %}
+
+{% block body %}
+	<div class="container box" style="background: rgba(255, 255, 255, 0.1);">
+		<h1 class="title is-1 is-info">Ajouter un produit</h1>
+
+		{{include('produits/form.html.twig') }}
+		
+
+		<a href="{{path('app_produits') }}" class="button is-info mt-3">Annuler</a>
+
+	</div>
+
+{% endblock %}

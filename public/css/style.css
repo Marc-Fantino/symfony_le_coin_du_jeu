@@ -1,0 +1,329 @@
+body{
+    background-image: url(../image/image-produit.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Accueil-cadre{
+margin-left: auto;
+margin-right: auto;
+}
+/******************Header*******************************/
+.header{
+background-color: #040404;
+}
+/******************Header*******************************/
+
+.footer{
+background-color: #040404;
+color: white;
+}
+/******************footer*******************************/
+.formulaire{
+    display: flex;
+    background-image: url(../image/effet-lumiere.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    
+    }
+    .formulaire-cadre{
+        padding-top: 100px;
+        text-align: center;
+        height: 400px;
+        width: 700px;
+        color: white;
+        font-size: xx-large;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        border-top: 1px solid rgb(125, 125, 125);
+        border-left: 1px solid rgb(125, 125, 125);
+        }
+/******************page formulaire de connexion*******************************/
+
+.Accueil{
+display: flex;
+background-image: url(../image/Fond-accueil.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+height: 100vh;
+}
+.Accueil-p{
+color:#3a0ca3;
+margin-top: 50px;
+font-size: 25px;
+}
+.a-btn {
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #b5179e;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    overflow: hidden;
+    transition: 0.2s;
+    }
+    .a-btn:hover{
+        color: #2196f3;
+        background: #b5179e;
+        box-shadow: 0 0 10px #b5179e, 0 0 40px #b5179e, 0 0 80px #b5179e; 
+    }
+/*****************Page principale**********************/
+.Accueil-produit{
+    display: flex;
+    min-height: 100vh;
+    margin-left: 200px;
+    margin-top: 50px;
+    overflow: hidden;
+    }
+.carte{
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+/*********************Carte*****************************/
+.card{
+height: 600px;
+width: 350px;
+background: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(5px);
+border-radius: 15px;
+border-top: 1px solid rgb(125, 125, 125);
+border-left: 1px solid rgb(125, 125, 125);
+}
+.card .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    }
+.card .content .picture{
+width: 110px;
+height: 110px;
+margin: 0 auto;
+position: relative;
+}
+
+.card .content .picture img{
+    width: 100%;
+    height: 100%;
+    }
+.card .content h1,
+.card .content p{
+color: white;
+text-align: center;
+}
+.a-btn-0 {
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #0d9ef1;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    overflow: hidden;
+    transition: 0.2s;
+    }
+.a-btn-0:hover{
+    color: #000000;
+    background:linear-gradient(45deg,#f87204, #b5179e);
+    box-shadow: 0 0 10px #f87204, 0 0 40px #0d9ef1, 0 0 80px #b5179e; 
+    }
+/*********************Detail**************************/
+.containerForm{
+    position: absolute;
+    overflow: hidden;
+    animation: color 4s linear infinite;
+    }
+    
+    @keyframes color {
+     0% {
+        filter: hue-rotate(0deg);
+     }
+     100% {
+        filter: hue-rotate(360deg);
+     }
+    
+     }
+     .rowForm{
+     display: inline-flex;
+     margin-left: -50px;
+     margin-top: -57px;
+     overflow: hidden;
+     }
+     .rowForm:nth-child(even){
+     margin-left: 1px;
+     }
+     .form{
+     position: relative;
+     height: 110px;
+     width: 108px;
+     background: rgba(255, 255, 255, 0.1);
+     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+     transition: 2s;
+     }
+     .form::after{
+     content: "";
+     position: absolute;
+     left: 0;
+     right: 0;
+     width: 100%;
+     height: 100%;
+     pointer-events: none;
+     background: rgba(255, 255, 255, 0.02);
+     }
+     .form:hover{
+     background: red;
+     transition: 0s;
+     }
+.card-detail{
+    height: 600px;
+    width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border-top: 1px solid rgb(125, 125, 125);
+    border-left: 1px solid rgb(125, 125, 125);
+    }
+    .card-detail-image{
+        height: 600px;
+        width: 250px;
+        margin-left: 400px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        border-top: 1px solid rgb(125, 125, 125);
+        border-left: 1px solid rgb(125, 125, 125);
+        }
+        .card-detail-image .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 0 20px;
+            }
+        .card-detail-image .content .picture{
+        width: 200px;
+        height: 500px;
+        position: relative;
+        background-color: yellow;
+        border-radius: 10px 10px 0px 0px;
+        }
+        
+        .card-detail-image .content .picture img{
+            width: 200px;
+            height: 200px;
+            
+            }
+            .borne{
+                background: #000000;
+                width: 200px;
+                height: 200px;
+                }
+.icon-arcade{
+color: #0e0e0e;
+text-align: center;
+}
+.icon-1{
+    color: #b5179e;
+}
+.icon-2{
+    color: #0d9ef1;
+}
+.icon-3{
+    color: #f80c34;
+}
+    .card-detail .content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 0 20px;
+        }
+    .card-detail .content h1,
+    .card-detail .content p{
+    color: white;
+    }
+    .a-btn-1 {
+        margin-top: 10px;
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        color: #0d9ef1;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        text-decoration: none;
+        font-size: 14px;
+        overflow: hidden;
+        transition: 0.2s;
+        }
+        .a-btn-1:hover{
+            color: #000000;
+            background: #0d9ef1;
+            box-shadow: 0 0 10px #0d9ef1, 0 0 40px #0d9ef1, 0 0 80px #0d9ef1; 
+        }
+        .a-btn-2 {
+            margin-top: 10px;
+            position: relative;
+            display: inline-block;
+            padding: 15px 30px;
+            color: #0d9ef1;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            overflow: hidden;
+            transition: 0.2s;
+            }
+            .a-btn-2:hover{
+                color: #000000;
+                background: #f87204;
+                box-shadow: 0 0 10px #f87204, 0 0 40px #f87204, 0 0 80px #f87204; 
+            }
+            .a-btn-3 {
+                margin-top: 10px;
+                position: relative;
+                display: inline-block;
+                padding: 15px 30px;
+                color: #0d9ef1;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                text-decoration: none;
+                font-size: 14px;
+                overflow: hidden;
+                transition: 0.2s;
+                }
+                .a-btn-3:hover{
+                    color: #000000;
+                    background: #f100c9;
+                    box-shadow: 0 0 10px #f100c9, 0 0 40px #f100c9, 0 0 80px #f100c9; 
+                }
+                .a-btn-4 {
+                    margin-top: 10px;
+                    position: relative;
+                    display: inline-block;
+                    padding: 15px 30px;
+                    color: #0d9ef1;
+                    text-transform: uppercase;
+                    letter-spacing: 4px;
+                    text-decoration: none;
+                    font-size: 14px;
+                    overflow: hidden;
+                    transition: 0.2s;
+                    }
+                    .a-btn-4:hover{
+                        color: #000000;
+                        background: #00f583;
+                        box-shadow: 0 0 10px #00f583, 0 0 40px #00f583, 0 0 80px #00f583; 
+                    }
+
+

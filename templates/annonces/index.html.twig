@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AnnoncesController!
+{% endblock %}
+
+{% block body %}
+
+	<div class="container Accueil-produit">
+		{% if (app.user) %}
+
+			<a href="{{path('app_annonces_new')}}" class="button">Ajouter une annonce</a>
+		{% endif %}
+		<div class="count">
+			Nombre d'articles:
+			{{pagination.getTotalItemCount}}
+		</div>
+		<div class="navigation" style="margin-top:20px">
+			{{knp_pagination_render(pagination)}}
+		</div>
+		{% for annonce_card in pagination %}
+			<div class="column is-5">
+
+				<div class="card">
+					<p class="is-size-2 has-text-centered has-text-warning">Annonce</p>
+					<div class="content">
+						<div class="picture">
+
+							<img src="/image/{{annonce_card.photo}}" alt="">
+						</div>
+						<h1>{{annonce_card.annonce}}</h1>
+					
+						{% if (app.user) %}
+							<button class="a-btn-2" style="background: rgba(255, 255, 255, 0.1);">
+								<a href="{{path('app_annonce_edit',{'id':annonce_card.id})}}">Modifier l'annonce</a>
+							</button>
+							{{include('annonces/delete_form.html.twig')}}
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+
+	<style>
+
+		footer {
+			position: absolute;
+			overflow-y: hidden;
+			width: 100%;
+			height: 50vh;
+		}
+	</style>
+{% endblock %}

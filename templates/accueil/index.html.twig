@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello Bienvenue sur Blueline-symfony
+{% endblock %}
+
+{% block body %}
+
+	<div class="Accueil">
+		<div class="Accueil-cadre has-text-centered mt-6">
+			<a href="{{path('app_produits')}}" class="a-btn is-size-1">Bienvenue</a>
+		</div>
+	</div>
+<style>
+#header {
+display:none;
+}
+footer {
+display:none;
+}
+</style>
+{% endblock %}

@@ -1,0 +1,48 @@
+<!-- Header including navbar -->
+<nav id="header" class="navbar header" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<a class="navbar-item" href="#">
+			<h1 class="has-text-white">Blueline-Symfony</h1>
+		</a>
+
+		<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+			<span aria-hidden="true"></span>
+		</a>
+	</div>
+	<div id="navbarBasicExample" class="navbar-menu button is-light">
+		<div class="navbar-start">
+		
+			<a href="{{path('app_produits')}}" class="navbar-item">
+				Accueil
+			</a>
+			<a class="navbar-item" href="{{path('app_annonces')}}">
+				Annonce
+			</a>
+				{% if (app.user) %}
+				<a class="navbar-item">
+					{{ app.user.userIdentifier }}
+				</a>
+				{% endif %}
+		</div>
+
+		<div class="navbar-end">
+			<div class="navbar-item">
+				<div class="buttons">
+					{% if is_granted('ROLE_USER') or is_granted('ROLE_ADMIN') %}
+						
+						<a class="button is-light" href="{{path('app_logout')}}">Deconnexion</a>
+					{% else %}
+						<a class="button is-light" href="{{path('app_login')}}">Connexion</a>
+						<a class="button is-light" href="{{path('app_register')}}">S'inscrire</a>
+					{% endif %}
+					{% if is_granted('ROLE_ADMIN')%}
+					<a class="button is-light" href="{{path('admin')}}">Administration</a>
+					{% endif %}
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</nav>
